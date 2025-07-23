@@ -8,13 +8,13 @@ def main():
     args = parser.parse_args()
 
     if args.command == "add":
-        print("You chose to add a new password.")
+        print("🔐 You chose to add a new password.")
     elif args.command == "get":
-        print("You chose to retrieve a password.")
+        print("🔍 You chose to retrieve a password.")
     elif args.command == "delete":
-        print("You chose to delete a password.")
+        print("🗑️ You chose to delete a password.")
     else:
-        print("Oops! Unknown command. Try: add, get, or delete.")
+        print("❗ Oops! Unknown command. Try: add, get, or delete.")
 
 if __name__ == "__main__":
     main()

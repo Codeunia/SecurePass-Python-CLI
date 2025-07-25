@@ -18,9 +18,11 @@
 
 ## 🧰 Tech Stack
 
-- **Language:** Python
-- **Libraries:** `cryptography`, `json`, `os`, `getpass`, `argparse`
-- **Interface:** Command Line Interface (CLI)
+| Component | Description |
+|----------|-------------|
+| **Language** | Python 3 |
+| **Libraries** | `cryptography`, `getpass`, `argparse`, `json`, `os` |
+| **Interface** | Command Line Interface (CLI) |
 
 ---
 

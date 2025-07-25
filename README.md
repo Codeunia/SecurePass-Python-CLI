@@ -7,6 +7,8 @@
 ## 🚀 Features
 
 - 🔐 Master password authentication
+- ➕ Add new password entries
+- 🔍 Retrieve passwords
 - 📝 Add, view, update, and delete password entries
 - 🔒 AES encryption using Python's `cryptography` library
 - 📁 Encrypted password storage in a local file

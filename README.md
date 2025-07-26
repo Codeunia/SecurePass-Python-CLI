@@ -1,6 +1,7 @@
 # SecurePass – A Local Password Manager CLI Tool 🔐
 
-**SecurePass** is a lightweight command-line application built in **Python** that allows users to **securely store, retrieve, and manage passwords** locally using encryption. It's a perfect starter project for anyone interested in cybersecurity, Python scripting, and secure data handling.
+**SecurePass** is a **Python-based command-line tool** that lets you **securely store and manage passwords locally** using a **master password** and **AES encryption**.  
+It’s perfect for **beginners exploring Python scripting, cybersecurity, and secure file handling** — offering hands-on experience with **CLI tools**, **encryption**, and **file storage**.
 
 ---
 

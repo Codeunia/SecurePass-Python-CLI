@@ -1,7 +1,11 @@
+from auth import verify_master_password
 import argparse
 
 def main():
     print("🔐 Welcome to SecurePass - Your Local Password Manager")
+
+    if not verify_master_password():
+        return
 
     parser = argparse.ArgumentParser()
     parser.add_argument("command")

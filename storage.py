@@ -18,8 +18,7 @@ def save_password(service, username, password):
     data = load_data()
     data[service] = {
         "username": username,
-        "password": encrypt_password(password)
-    }
+        "password": encrypt_password(password) }
     save_data(data)
 
 def get_password(service):
@@ -28,4 +27,11 @@ def get_password(service):
         entry = data[service]
         entry["password"] = decrypt_password(entry["password"])
         return entry
-    return None
+
+def delete_password(service):
+    data = load_data()
+    if service in data:
+        del data[service]
+        save_data(data)
+        return True
+    return False

@@ -27,6 +27,7 @@ def get_password(service):
         entry = data[service]
         entry["password"] = decrypt_password(entry["password"])
         return entry
+    return None
 
 def delete_password(service):
     data = load_data()
@@ -35,3 +36,17 @@ def delete_password(service):
         save_data(data)
         return True
     return False
+
+def list_services():
+    data = load_data()
+    if not data:
+        print("🚫 No services stored yet.")
+        return
+
+    print("🔍 Stored Sites/Services:")
+    for service in data:
+        print(f"- {service}")
+
+def clear_all_passwords():
+    save_data({})
+    print("🆑 All saved services have been deleted.")

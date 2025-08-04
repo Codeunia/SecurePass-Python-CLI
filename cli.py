@@ -1,5 +1,5 @@
 from auth import verify_master_password
-from storage import save_password, get_password, delete_password
+from storage import save_password, get_password, delete_password, list_services, clear_all_passwords
 import argparse
 
 def main():
@@ -9,7 +9,7 @@ def main():
         return
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("command", help="add, get, or delete")
+    parser.add_argument("command", help="add, get, delete, list, or clear")
     args = parser.parse_args()
 
     if args.command == "add":
@@ -28,15 +28,25 @@ def main():
         else:
             print("❌ No entry found for that service.")
 
-    elif args.command == "delete":  
+    elif args.command == "delete":
         service = input("Enter the site/service name to delete: ")
         if delete_password(service):
             print("🗑️ Password deleted successfully.")
         else:
             print("❌ No entry found to delete.")
 
+    elif args.command == "list":
+        list_services()
+
+    elif args.command == "clear":
+        confirm = input("⚠️ Are you sure you want to delete ALL saved entries? (yes/no): ")
+        if confirm.lower() == "yes":
+            clear_all_passwords()
+        else:
+            print("❎ Operation cancelled.")
+
     else:
-        print("❗ Oops! Unknown command. Try: add, get, or delete.")
+        print("❗ Oops! Unknown command. Try: add, get, delete, list, or clear.")
 
 if __name__ == "__main__":
     main()
